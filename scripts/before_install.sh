@@ -13,7 +13,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 DOCKER_LINK=/usr/bin/docker-compose
-if [ -d "$DOCKER_LINK" ]; then
+if [ -f "$DOCKER_LINK" ]; then
    echo "${DOCKER_LINK} exists"
 else
    echo "Creating ${DOCKER_LINK} Link"
