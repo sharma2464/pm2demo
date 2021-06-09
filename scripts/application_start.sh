@@ -3,7 +3,7 @@
 # --------------------------------------
 
 # Give full permission to the app directory
-sudo chmod -R 777 /home/ec2-user/demo
+# sudo chmod -R 777 /home/ec2-user/demo
 
 # Navigate into our working directory where we have all our github files
 cd /home/ec2-user/demo

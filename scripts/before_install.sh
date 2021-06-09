@@ -13,7 +13,6 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 echo "DOCKER COMPOSE Version"
 docker-compose --version
 
-
 DIR=/home/ec2-user/demo
 
 if [ -d "$DIR" ]; then
