@@ -1,6 +1,9 @@
 #!/bin/bash
 # This script installs required application and environemt dependencies
 # --------------------------------------
+set -e
+yum update -y
+
 # Installing DOCKER
 echo "(Re)Installing DOCKER"
 amazon-linux-extras install docker=latest
