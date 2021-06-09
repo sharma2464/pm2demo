@@ -1,21 +1,15 @@
-version: 0.0
+version: 2
 os: linux
-variables:
-  user: ec2-user
-  appName: demo
 files:
   - source: /
-    destination: home/ec2-user/demo
+    destination: /home/ec2-user/demo
     overwrite: true
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
       timeout: 300
-      runas: ec2-user
     - location: scripts/application_start.sh
       timeout: 300
-      runas: ec2-user
   ApplicationStop:
     - location: scripts/application_stop.sh
       timeout: 300
-      runas: ec2-user
