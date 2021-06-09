@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    script: './index.js',
+    script: 'pm2 start ./index.js',
     watch: '.',
     env: {
       "PORT": "8080"

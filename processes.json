@@ -1,0 +1,12 @@
+[
+    {
+        "name": "client",
+        "script": "serve -s ./packages/client/build/",
+        "instances": "3"
+    },
+    {
+        "name": "server",
+        "script": "./packages/server/index.js",
+        "instances": "max"
+    }
+]

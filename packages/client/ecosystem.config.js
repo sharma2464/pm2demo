@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    script: 'serve -s build/',
+    script: 'pm2 serve -s build/',
     watch: '.',
     env: {
       "PORT": "9090"
