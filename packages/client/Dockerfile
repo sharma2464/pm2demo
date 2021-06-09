@@ -4,7 +4,7 @@ WORKDIR /client
 
 COPY package*.json ./
 
-RUN yarn install
+RUN yarn global add pm2@latest serve@latest && yarn install
 
 COPY . .
 

@@ -10,10 +10,10 @@ set -e
 cd /home/ec2-user/demo
 
 # Echo files
-echo "Current directory $(pwd)"
-echo "folders in root $(ls -alF ~)"
-echo "folders in home $(ls -alF /home)"
-ls -sha
+# echo "Current directory $(pwd)"
+# echo "folders in root $(ls -alF ~)"
+# echo "folders in home $(ls -alF /home)"
+# ls -sha
 
 # Clone 
 
