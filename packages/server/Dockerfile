@@ -4,7 +4,7 @@ WORKDIR /server
 
 COPY package*.json ./
 
-RUN yarn global add pm2@latest serve@latest && yarn install
+RUN yarn install
 
 COPY . .
 
@@ -12,4 +12,5 @@ ENV PORT=8080
 
 EXPOSE 8080
 
-CMD ["pm2", "start", "ecosystem.config.js"]
+CMD ["./scripts/start.sh"]
+# CMD ["pm2", "start", "ecosystem.config.js"]
