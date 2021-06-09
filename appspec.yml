@@ -6,12 +6,13 @@ variables:
 files:
   - source: /
     destination: home/ec2-user/demo
+    overwrite: true
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
       timeout: 300
       runas: root
-    - location: scripts/application_start .sh
+    - location: scripts/application_start.sh
       timeout: 300
       runas: root
   ApplicationStop:
