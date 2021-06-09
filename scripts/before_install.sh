@@ -11,7 +11,14 @@ amazon-linux-extras install docker=latest
 echo "(Re)Installing DOCKER COMPOSE"
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+DOCKER_LINK=/usr/bin/docker-compose
+if [ -d "$DOCKER_LINK" ]; then
+   echo "${DOCKER_LINK} exists"
+else
+   echo "Creating ${DOCKER_LINK} Link"
+   sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+fi
 
 echo "DOCKER COMPOSE Version"
 docker-compose --version
