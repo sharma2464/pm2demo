@@ -3,3 +3,7 @@ node_modules
 packages/server/node_modules
 packages/client/node_modules
 packages/client/build
+node_modules/
+.idea/
+**/node_modules
+.env
