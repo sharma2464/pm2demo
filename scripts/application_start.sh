@@ -4,18 +4,13 @@
 set -e
 
 # Give full permission to the app directory
-# sudo chmod -R 777 /home/ec2-user/demo
+sudo chmod -R 777 /home/ec2-user/pm2demo
 
-# Navigate into our working directory where we have all our github files
-cd /home/ec2-user/demo
+# Navigate into our working directory
+# cd /home/ec2-user/pm2demo
 
-# Echo files
-# echo "Current directory $(pwd)"
-# echo "folders in root $(ls -alF ~)"
-# echo "folders in home $(ls -alF /home)"
-# ls -sha
+# Build frontend before serving
+npx yarn run build:client 
 
-# Clone 
-
-# Run Docker Compose
-docker-compose up -d
+# Start Both processes using PM2 in background
+npx pm2 start ecosystem.config.js

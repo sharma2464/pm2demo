@@ -5,25 +5,13 @@ set -e
 yum update -y
 
 # Installing DOCKER
-echo "(Re)Installing DOCKER"
-amazon-linux-extras install docker=latest
+echo "(Re)Installing NVM"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
-echo "(Re)Installing DOCKER COMPOSE"
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+# Install latest node
+nvm install node
 
-DOCKER_LINK=/usr/bin/docker-compose
-if [ -f "$DOCKER_LINK" ]; then
-   echo "${DOCKER_LINK} exists"
-else
-   echo "Creating ${DOCKER_LINK} Link"
-   sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-fi
-
-echo "DOCKER COMPOSE Version"
-docker-compose --version
-
-DIR=/home/ec2-user/demo
+DIR=/home/ec2-user/pm2demo
 
 if [ -d "$DIR" ]; then
    echo "${DIR} exists"
@@ -31,3 +19,9 @@ else
    echo "Creating ${DIR} directory"
    mkdir ${DIR}
 fi
+
+# Navigate into our working directory
+cd /home/ec2-user/pm2demo
+
+npm install -g pm2
+npx yarn install

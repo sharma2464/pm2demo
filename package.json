@@ -7,7 +7,8 @@
   "private": true,
   "workspaces": ["packages/**"],
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build:client": "yarn workspace @demo/client run build"
   },
   "dependencies": {
     "express": "^4.17.1"

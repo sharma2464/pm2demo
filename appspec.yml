@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/demo
+    destination: /home/ec2-user/pm2demo
     overwrite: true
 hooks:
   BeforeInstall:

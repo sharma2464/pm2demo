@@ -1,6 +1,5 @@
-version: "3.2"
+version: "3.0"
 services:    
-
     client:
         build: ./packages/client/
         ports:
@@ -10,6 +9,7 @@ services:
         build: ./packages/server/
         ports:
             - "8080:8080"
+        
         
 
 #     db:
