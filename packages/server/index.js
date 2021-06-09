@@ -10,8 +10,12 @@ app.get('/', function(req, res) {
   res.send('Hello from root route.');
 });
 
+app.listen(port, () => {
+  console.log("Server started @", port);
+})
+
 /* istanbul ignore next */
-if (!module.parent) {
-  app.listen(port);
-  console.log('Express started on port:', port);
-}
+// if (!module.parent) {
+//   app.listen(port);
+//   console.log('Express started on port:', port);
+// }

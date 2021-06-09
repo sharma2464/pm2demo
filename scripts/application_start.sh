@@ -18,4 +18,4 @@ cd /home/ec2-user/demo
 # Clone 
 
 # Run Docker Compose
-docker-compose up
+docker-compose up -d
