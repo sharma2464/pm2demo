@@ -1,0 +1,15 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Docker",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["packages/**"],
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

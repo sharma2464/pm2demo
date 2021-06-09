@@ -1,0 +1,23 @@
+version: "3.2"
+services:    
+    client:
+        build: packages/client
+        ports:
+            - "9090:9090"
+        
+
+    server:
+        build: ./packages/server/
+        ports:
+            - "80:8080"
+        
+
+#     db:
+#         image: "mysql"
+#         environment: 
+#             MYSQL_ROOT_PASSWORD: password
+#         volumes: 
+#             - web-data/testdb
+            
+# volumes: 
+#     web-data:
