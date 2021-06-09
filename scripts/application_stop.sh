@@ -7,7 +7,8 @@
 
 cd /home/ec2-user/demo
 
-echo "Stopping existing Docker Containers"
+# echo "Stopping existing Docker Containers"
+
 # docker-compose down
 
 # Removing / Purging all the images
