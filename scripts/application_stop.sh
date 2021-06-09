@@ -1,9 +1,9 @@
 #!/bin/bash
 # This script stops existing node server
 # --------------------------------------
-echo "Stopping & deleting existing PM2 Processes"
-pm2 stop all
-pm2 del all
+# echo "Stopping & deleting existing PM2 Processes"
+# pm2 stop all
+# pm2 del all
 
 echo "Stopping existing Docker Containers"
 docker-compose down
