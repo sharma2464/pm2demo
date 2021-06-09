@@ -10,5 +10,15 @@ docker-compose down
 
 # Removing / Purging all the images
 echo "Purging / Removing existing Docker Containers"
-docker rm -vf $(docker ps -a -q)
-docker rmi -f $(docker images -a -q)
+
+# if [! docker ps -a -q && ! docker images -a -q] ; then
+if [[ ! $(docker ps -a -q) || ! $(docker images -a -q) ]] ; then
+    echo "No Docker Containers to Purge / Delete"
+else
+    docker rm -vf $(docker ps -a -q)
+    docker rmi -f $(docker images -a -q)
+fi
+
+
+# docker rm -vf $(docker ps -a -q)
+# docker rmi -f $(docker images -a -q)
