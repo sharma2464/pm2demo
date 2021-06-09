@@ -1,6 +1,10 @@
 #!/bin/bash
 # This script stops existing node server
 # --------------------------------------
+echo "Removing directory"
+sudo rm -rf /home/ec2-user/demo
+
+
 # echo "Stopping & deleting existing PM2 Processes"
 # pm2 stop all
 # pm2 del all
