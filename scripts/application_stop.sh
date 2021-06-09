@@ -5,6 +5,8 @@
 # pm2 stop all
 # pm2 del all
 
+cd /home/ec2-user/demo
+
 echo "Stopping existing Docker Containers"
 docker-compose down
 
