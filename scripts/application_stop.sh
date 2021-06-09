@@ -1,7 +1,7 @@
 #!/bin/bash
 # This script stops existing node server
 # --------------------------------------
-set -e
+# set -e
 
 # echo "Stopping & deleting existing PM2 Processes"
 npx pm2 stop all

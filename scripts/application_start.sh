@@ -4,7 +4,7 @@
 set -e
 
 # Give full permission to the app directory
-sudo chmod -R 777 /home/ec2-user/pm2demo
+# sudo chmod -R 777 /home/ec2-user/pm2demo
 
 # Navigate into our working directory
 # cd /home/ec2-user/pm2demo
