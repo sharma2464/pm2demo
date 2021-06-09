@@ -8,5 +8,9 @@
 # Navigate into our working directory where we have all our github files
 cd /home/ec2-user/demo
 
+# Echo files
+echo "Current directory $(pwd)"
+ls -sha
+
 # Run Docker Compose
 docker-compose up
